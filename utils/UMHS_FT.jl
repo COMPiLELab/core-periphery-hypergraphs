@@ -1,14 +1,9 @@
+# This code is adapted from the code for UMHS available at https://github.com/ilyaamburg/Hypergraph-Planted-Hitting-Set-Recovery
+
 using Random
+
 function UMHS_FT(edges,num_nodes,core,nhit::Int64)
     hyper = collect.(edges)
-    # println(hyper)
-    # Partition a into hyperedge
-    # hyper=[a[1:b[1]]]
-    # index=b[1]
-    # for j in 1:length(b)-1
-    #     push!(hyper,a[index+1:index+b[j+1]])
-    #     index=index+b[j+1]
-    # end
 
     umhs=zeros(Int64,num_nodes)
     coverlength=Float64[]
